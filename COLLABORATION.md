@@ -46,6 +46,7 @@ Welcome to the Node.js Microservices Project! This document outlines best practi
   ```bash
   docker-compose down --volumes && docker system prune -af && docker-compose up --build
   docker-compose down && docker system prune -af && docker-compose up --build(If ypu dont want to loose sql data)
+  docker-compose exec post-service ls /app (check all files in container)
   ```
 
 ## Docker & RabbitMQ
