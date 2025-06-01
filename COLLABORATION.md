@@ -44,7 +44,7 @@ Welcome to the Node.js Microservices Project! This document outlines best practi
 - Use `.env` files for local secrets (never commit them).
 - Start all services with Docker Compose:
   ```bash
-  docker-compose up --build
+  docker-compose down --volumes && docker system prune -af && docker-compose up --build
   ```
 
 ## Docker & RabbitMQ
