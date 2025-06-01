@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use('/users', userRoutes);
 
-sequelize.sync().then(() => {
+// sequelize.sync().then(() => {
   console.log('User DB synced');
   app.listen(3002, () => console.log('User service running on port 3002'));
-});
+// });
