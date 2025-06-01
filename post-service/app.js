@@ -8,10 +8,10 @@ const app = express();
 app.use(express.json());
 app.use('/posts', postRoutes);
 
-sequelize.sync().then(() => {
+// sequelize.sync().then(() => {
   console.log('Post DB synced');
   app.listen(3001, () => console.log('Post service running on port 3001'));
-});
+// });
 
 async function consumeUserCreated() {
   const connection = await amqp.connect('amqp://rabbitmq');
