@@ -16,6 +16,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    volumes:
+      - db_data:/var/lib/mysql
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -46,3 +48,6 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_started
+
+volumes:
+  db_data:
